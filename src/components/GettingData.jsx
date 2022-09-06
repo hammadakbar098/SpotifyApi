@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import DisplayArtists from "./DisplayArtists";
+import "./GettingData.css";
 const options = {
   headers: {
     "X-RapidAPI-Key": "3c91dd1586mshd22f0295ff54a14p1f6dbbjsn984dc07bb1ad",
@@ -20,9 +21,16 @@ class GettingData extends Component {
   render() {
     const { artists } = this.state;
     return (
-      <div>
-        <DisplayArtists artists={artists} />
-      </div>
+      <>
+        <div>
+          <h1 className="gradient-text">
+            This months top 20 streamed artists{" "}
+          </h1>
+        </div>
+        <div>
+          <DisplayArtists artists={artists} />
+        </div>
+      </>
     );
   }
 }
