@@ -4,8 +4,20 @@
   align-content: center;
   justify-content: center;
 }
+
+.reveal {
+  /* position: relative;
+  transform: translateY(10px);
+  opacity: 1;
+  transition: 1s all ease; */
+  transition: transform 1s ease-out;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .card {
-  opacity: 0.95;
   /* background: rgb(207, 244, 210);
   background: linear-gradient(
     321deg,
@@ -13,12 +25,15 @@
     rgba(207, 244, 210, 1) 26%,
     rgba(123, 228, 149, 1) 85%
   ); */
-  background: rgb(204, 173, 189);
+  /* background: rgb(204, 173, 189);
   background: linear-gradient(
     76deg,
     rgba(204, 173, 189, 1) 31%,
     rgba(134, 227, 206, 0.9528186274509804) 100%
-  );
+  ); */
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+
   width: 500px;
   height: 180px;
   border-radius: 15px;
@@ -40,7 +55,7 @@
 .ml {
   font-size: 2rem;
 }
-
+/* Tablet / Ipad design */
 @media (max-width: 1040px) and (min-width: 601px) {
   .card {
     width: 380px;
@@ -60,7 +75,7 @@
     font-size: 1.8rem;
   }
 }
-
+/* Mobile design */
 @media (max-width: 600px) /*and (min-width: 480px) */ {
   .gridContainer {
     grid-template-columns: auto;

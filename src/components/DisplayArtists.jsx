@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./DisplayArtists.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const DisplayArtists = ({ artists }) => {
-  console.log(artists);
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
-    <div className="gridContainer">
-      {artists.map((artist) => (
-        <div className="card">
+    <div className="gridContainer reveal">
+      {artists.map((artist, index) => (
+        <div key={index} data-aos="zoom-in-up" className="card">
           <span className="align-text">
             <h2>{artist.rank}</h2>
             <h1>{artist.artist}</h1>
