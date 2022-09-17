@@ -10,6 +10,7 @@ const options = {
 };
 const apiEndpoint =
   "https://spotify81.p.rapidapi.com/top_20_by_monthly_listeners";
+
 class GettingData extends Component {
   state = {
     artists: [],
@@ -24,7 +25,7 @@ class GettingData extends Component {
       <>
         <div>
           <h1 className="gradient-text">
-            This months top 20 streamed artists{" "}
+            This months top {this.state.artists.length} streamed artists{" "}
           </h1>
         </div>
         <div>
